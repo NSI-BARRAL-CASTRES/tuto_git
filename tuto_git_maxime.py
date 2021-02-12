@@ -15,6 +15,10 @@ def pen_purple() :
     global pen
     pen = "purple"
     
+def pen_blue() :
+    global pen
+    pen = "blue"
+
 #clicks/bind event
 def callclick(event) :
     for c in coord :
@@ -33,6 +37,7 @@ canvas.pack()
 frame1 = tk.Frame(window,borderwidth=2)
 frame1.pack(side="top", fill="both", ipadx=10, ipady=10, expand=0)
 button1 = tk.Button(window,text="violet", command=pen_purple).pack(side="right", padx=10, pady=10)
+button2 = tk.Button(window,text="bleu", command=pen_blue).pack(side="right", padx=10, pady=10)
 
 #creation du bandeau
 def create_bandeau(list) :
