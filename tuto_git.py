@@ -41,9 +41,6 @@ canvas.pack()
 #buttons
 frame1 = tk.Frame(window,borderwidth=2)
 frame1.pack(side="top", fill="both", ipadx=10, ipady=10, expand=0)
-button1 = tk.Button(window,text="violet", command=pen_purple).pack(side="right", padx=10, pady=10)
-button2 = tk.Button(window,text="bleu", command=pen_blue).pack(side="right", padx=10, pady=10)
-button3 = tk.Button(window,text="rouge", command=pen_red).pack(side="right", padx=10, pady=10)
 
 #creation du bandeau
 def create_bandeau(list) :
@@ -56,6 +53,15 @@ def create_bandeau(list) :
         x+=100 
 
 create_bandeau(bandeau)
+
+def reset_btn_callback():
+    create_bandeau(bandeau)
+
+violet_button = tk.Button(window,text="reset", command=reset_btn_callback).pack(side="left", padx=10, pady=10)
+
+violet_button = tk.Button(window,text="violet", command=pen_purple).pack(side="right", padx=10, pady=10)
+blue_button = tk.Button(window,text="bleu", command=pen_blue).pack(side="right", padx=10, pady=10)
+rouge_button = tk.Button(window,text="rouge", command=pen_red).pack(side="right", padx=10, pady=10)
 
 #attribution des events 
 canvas.bind("<Button-1>", callclick) 
