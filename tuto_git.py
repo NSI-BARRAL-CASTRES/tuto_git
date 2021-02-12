@@ -2,8 +2,8 @@ import tkinter as tk
 import random as r
 
 #bandeau de couleurs
-couleurs = ["red","pink","purple","blue","green","yellow","orange"]
-bandeau = [0,1,2,3,4,5,6,0,1,2]
+couleurs = ["black"]
+bandeau = [0,0,0,0,0,0,0,0,0,0]
 coord = []
 
 #pencil
@@ -18,6 +18,11 @@ def pen_purple() :
 def pen_blue() :
     global pen
     pen = "blue"
+    
+def pen_red() :
+    global pen
+    pen = "red"
+
 
 #clicks/bind event
 def callclick(event) :
@@ -38,6 +43,7 @@ frame1 = tk.Frame(window,borderwidth=2)
 frame1.pack(side="top", fill="both", ipadx=10, ipady=10, expand=0)
 button1 = tk.Button(window,text="violet", command=pen_purple).pack(side="right", padx=10, pady=10)
 button2 = tk.Button(window,text="bleu", command=pen_blue).pack(side="right", padx=10, pady=10)
+button3 = tk.Button(window,text="rouge", command=pen_red).pack(side="right", padx=10, pady=10)
 
 #creation du bandeau
 def create_bandeau(list) :
